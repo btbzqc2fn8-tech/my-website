@@ -1,32 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Site</title>
+  <title>Login</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+  <!-- NAVBAR -->
   <div class="navbar">
-    <div class="logo">MySite</div>
-    <div>
-      <a href="#">Charts</a>
-      <a href="#">Marketplace</a>
-      <a href="#">Create</a>
+    <div class="left">
+      <div class="logo"></div>
+      <a>Charts</a>
+      <a>Marketplace</a>
+      <a>Create</a>
+      <a>Robux</a>
+    </div>
+
+    <div class="right">
+      <button class="create-btn">Create account</button>
+      <div class="close">✕</div>
     </div>
   </div>
 
+  <!-- LOGIN -->
   <div class="container">
     <h1>Sign in</h1>
     <p>Jump back into your experiences</p>
 
+    <label>Username, email, or phone</label>
     <input type="text" placeholder="Username, email, or phone">
-    <input type="password" placeholder="Password">
 
-    <button>Sign in</button>
+    <label>Password</label>
+    <div class="password-box">
+      <input id="password" type="password" placeholder="Password">
+      <span class="eye" onclick="togglePassword()">👁</span>
+    </div>
+
+    <button class="signin">Sign in</button>
 
     <p class="forgot">Forgot password or username?</p>
   </div>
+
+  <script>
+    function togglePassword() {
+      const input = document.getElementById("password");
+      input.type = input.type === "password" ? "text" : "password";
+    }
+  </script>
 
 </body>
 </html>
